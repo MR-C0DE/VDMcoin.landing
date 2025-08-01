@@ -1,0 +1,249 @@
+/* === style.css === */
+
+/* 1. Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f8;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* 2. Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: linear-gradient(to right, #4f46e5, #7c3aed);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.btn {
+  background: #fff;
+  color: #6d28d9;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #c4b5fd;
+  color: #1e1b4b;
+}
+
+/* 3. Hero Section */
+.hero {
+  text-align: center;
+  padding: 20rem 1rem;
+  background: linear-gradient(to bottom, #7c3aed, #4c1d95);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero .cta-btn {
+  margin-top: 5rem;
+  background: #fff;
+  color: #6d28d9;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  animation: fadeInUp 1.4s ease forwards;
+  
+}
+
+/* 4. Section Styles */
+.section {
+  padding: 5rem 1rem;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4c1d95;
+  position: relative;
+}
+
+.section p, .section ul, .section ol {
+  font-size: 1.05rem;
+  color: #555;
+}
+
+.section ul li, .section ol li {
+  padding: 0.5rem 0;
+}
+
+.tokenomics {
+  background: #ede9fe;
+  border-left: 6px solid #7c3aed;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* 5. Socials */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #6d28d9;
+  padding: 0.8rem 1.2rem;
+  border: 2px solid #6d28d9;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #6d28d9;
+  color: white;
+}
+
+/* 6. Footer */
+footer {
+  background: #f5f3ff;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 2px solid #ddd;
+}
+
+/* 7. Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 {
+  transition-delay: 0.3s;
+}
+
+.delay-2 {
+  transition-delay: 0.6s;
+}
+
+/* 8. Responsive Design */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .container {
+    padding: 0 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn, .cta-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
