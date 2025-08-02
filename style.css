@@ -338,3 +338,90 @@ footer {
     font-size: 1.7rem;
   }
 }
+
+
+.tokenomics-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tokenomics-row {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr 2fr;
+  background: #f3e8ff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.tokenomics-col {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.tokenomics-col.category {
+  font-weight: bold;
+  color: #4c1d95;
+}
+
+.tokenomics-col.allocation {
+  text-align: center;
+  font-weight: 600;
+  color: #7c3aed;
+}
+
+.tokenomics-col.description {
+  font-style: italic;
+  color: #555;
+}
+
+/* Header Row for Desktop Only */
+@media (min-width: 769px) {
+  .tokenomics-wrapper::before {
+    content: '';
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 2fr;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: #6d28d9;
+    border-radius: 8px;
+    content: "Category Allocation Description";
+  }
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .tokenomics-row {
+    grid-template-columns: 1fr;
+    background: #ede9fe;
+  }
+
+  .tokenomics-col {
+    padding: 0.4rem 0;
+  }
+
+  .tokenomics-col::before {
+    content: attr(class);
+    font-weight: bold;
+    display: block;
+    text-transform: capitalize;
+    color: #6d28d9;
+    margin-bottom: 0.3rem;
+  }
+
+  .tokenomics-col.category::before {
+    content: "Category";
+  }
+
+  .tokenomics-col.allocation::before {
+    content: "Allocation";
+  }
+
+  .tokenomics-col.description::before {
+    content: "Description";
+  }
+}

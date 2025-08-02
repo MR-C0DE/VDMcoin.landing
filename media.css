@@ -1,0 +1,409 @@
+/* media.css - Gestion responsive du plus grand au plus petit écran */
+
+/* ===== Très grands écrans ≥ 1440px ===== */
+@media (min-width: 1440px) {
+  /* Navbar */
+  .navbar {
+    padding: 1.5rem 4rem;
+  }
+
+  .logo {
+    font-size: 2.25rem;
+    gap: 1rem;
+  }
+
+  .logo img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .nav-links a {
+    font-size: 1.15rem;
+    margin: 0 1.5rem;
+  }
+
+  .btn.telegram-btn {
+    font-size: 1.15rem;
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 4.5rem;
+    letter-spacing: 0.04em;
+  }
+
+  .hero p {
+    font-size: 1.6rem;
+    max-width: 850px;
+  }
+
+  .hero .cta-btn {
+    font-size: 1.3rem;
+    padding: 1rem 3rem;
+    border-radius: 60px;
+    box-shadow: 0 8px 15px rgba(124, 58, 237, 0.4);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hero .cta-btn:hover {
+    box-shadow: 0 12px 30px rgba(124, 58, 237, 0.7);
+  }
+
+  /* Sections */
+  .section h2 {
+    font-size: 2.8rem;
+  }
+
+  .section p,
+  .section ul li,
+  .section ol li {
+    font-size: 1.3rem;
+  }
+
+  /* Tokenomics table */
+  .table-wrapper table {
+    min-width: 800px;
+    font-size: 1.15rem;
+  }
+
+  /* Animations */
+  .fade-up {
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* ===== Desktop classique 1025px à 1439px ===== */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .navbar {
+    padding: 1.3rem 3rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .logo img {
+    height: 72px;
+    width: 72px;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    margin: 0 1.3rem;
+  }
+
+  .btn.telegram-btn {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.8rem;
+    border-radius: 35px;
+  }
+
+  .hero h1 {
+    font-size: 3.8rem;
+  }
+
+  .hero p {
+    font-size: 1.45rem;
+    max-width: 750px;
+  }
+
+  .hero .cta-btn {
+    font-size: 1.15rem;
+    padding: 0.95rem 2.5rem;
+  }
+
+  .section h2 {
+    font-size: 2.5rem;
+  }
+
+  .section p,
+  .section ul li,
+  .section ol li {
+    font-size: 1.2rem;
+  }
+
+  .table-wrapper table {
+    min-width: 700px;
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== Tablettes larges 769px à 1024px ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 1.2rem 2.5rem;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  .logo img {
+    height: 64px;
+    width: 64px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    margin: 0 0.8rem;
+  }
+
+  .btn.telegram-btn {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+
+  .hero .cta-btn {
+    font-size: 1.05rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .section h2 {
+    font-size: 2.2rem;
+  }
+
+  .section p,
+  .section ul li,
+  .section ol li {
+    font-size: 1.1rem;
+  }
+
+  .table-wrapper table {
+    min-width: 600px;
+    font-size: 1rem;
+  }
+}
+
+/* ===== Tablettes / mobiles larges 481px à 768px ===== */
+@media (min-width: 481px) and (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .logo img {
+    height: 56px;
+    width: 56px;
+  }
+
+  .nav-links {
+    display: none; /* Peut être remplacé par un menu hamburger */
+  }
+
+  .btn.telegram-btn {
+    width: auto;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.2rem;
+    color: red;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .cta-btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .section p,
+  .section ul li,
+  .section ol li {
+    font-size: 0.95rem;
+  }
+
+  .table-wrapper table {
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== Mobiles petits écrans 321px à 480px ===== */
+@media (min-width: 321px) and (max-width: 480px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 1rem 1.2rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .logo img {
+    height: 48px;
+    width: 48px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .btn.telegram-btn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    border-radius: 25px;
+    margin-top: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  .hero .cta-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.4rem;
+  }
+
+  .section p,
+  .section ul li,
+  .section ol li {
+    font-size: 0.85rem;
+  }
+
+  .table-wrapper table {
+    font-size: 0.8rem;
+    min-width: 100%;
+  }
+}
+
+/* ===== Très petits écrans ≤ 320px (ex iPhone 5) ===== */
+@media (max-width: 320px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.8rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .logo img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+    margin: 0.2rem 0;
+  }
+
+  .btn.telegram-btn {
+    width: 100%;
+    font-size: 0.75rem;
+    padding: 0.4rem 0;
+    border-radius: 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 0.75rem;
+  }
+
+  .hero .cta-btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .section h2 {
+    font-size: 1.1rem;
+  }
+
+  .section p,
+  .section ul li,
+  .section ol li {
+    font-size: 0.75rem;
+  }
+
+  .table-wrapper table {
+    font-size: 0.7rem;
+    min-width: 100%;
+  }
+}
+
+/* ===== Animations supplémentaires ===== */
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeInScaleUp 0.6s ease forwards;
+}
+
+.fade-up.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fade-up.delay-2 {
+  animation-delay: 0.6s;
+}
+
+/* Transition douce pour navbar, boutons */
+.navbar,
+.btn,
+.nav-links a {
+  transition: all 0.3s ease;
+}
+
+/* Hover effet bouton */
+.btn:hover,
+.btn:focus {
+  background-color: #9333ea;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.6);
+  transform: translateY(-2px);
+}
